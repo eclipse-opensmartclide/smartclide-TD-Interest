@@ -1,0 +1,1 @@
+package org.eclipse.opensmartclide.tdreusabilityapi.service.principal.analysis.parser.infrastructure.entities;
