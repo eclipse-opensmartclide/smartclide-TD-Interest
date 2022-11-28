@@ -20,10 +20,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>gr.zisis</groupId>
-    <artifactId>interest-api</artifactId>
+    <groupId>org.eclipse.opensmartclide</groupId>
+    <artifactId>tdreusabilityapi</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>interest-api</name>
+    <name>td-reusability-api</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
