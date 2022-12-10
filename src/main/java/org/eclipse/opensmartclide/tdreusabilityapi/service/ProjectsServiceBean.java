@@ -46,10 +46,9 @@ public class ProjectsServiceBean implements ProjectsService {
         String owner = getRepositoryOwner(url);
         String repoName = getRepositoryName(url);
         String clonePath = "/tmp/"+ owner + "_" + repoName + "_" + System.currentTimeMillis();
-        if (Objects.isNull(VCSAccessToken))
-            pb = new ProcessBuilder("java", "-jar", "interest.jar", url, clonePath, databaseDriver, databaseUrl, databaseUser, databasePass);
-        else
-            pb = new ProcessBuilder("java", "-jar", "interest.jar", url, clonePath, databaseDriver, databaseUrl, databaseUser, databasePass, VCSAccessToken);
+        pb = Objects.isNull(VCSAccessToken) ?
+                new ProcessBuilder("java", "-jar", "interest.jar", url, clonePath, databaseDriver, databaseUrl, databaseUser, databasePass) :
+                new ProcessBuilder("java", "-jar", "interest.jar", url, clonePath, databaseDriver, databaseUrl, databaseUser, databasePass, VCSAccessToken);
         Process process = pb.start();
         process.waitFor();
         FileSystemUtils.deleteRecursively(new File(clonePath));
