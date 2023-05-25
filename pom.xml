@@ -28,7 +28,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <testcontainers.version>1.17.6</testcontainers.version>
+        <testcontainers.version>1.18.1</testcontainers.version>
         <hibernate-types.version>2.21.0</hibernate-types.version>
     </properties>
 
